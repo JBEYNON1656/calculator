@@ -54,6 +54,11 @@ table {
     margin: 40px;
 }
 
+div {
+  font-family: Arial;
+  font-size: 20px;
+}
+
 #results {
     /* height: 40px; */
     width: 179px;
@@ -64,11 +69,13 @@ table {
 
 #clear {
   height: 40px;
-  width: 60px;
+  width: 82px;
 }
 
 button {
   height: 40px;
   width: 40px;
   margin: 4px 3px;
+  font-size: 25px;
+  background: #ccd2e3;
 }

@@ -1,14 +1,14 @@
 
 function operator(opera, num1, num2){
-	if (opera == "Add"){return num1 + num2}
-		else if (opera === "Subtract"){return num1 - num2}
-		else if (opera === "Multiply"){return num1 * num2}
+	if (opera === "add"){return num1 + num2}
+		else if (opera === "subtract"){return num1 - num2}
+		else if (opera === "multiply"){return num1 * num2}
 		else {return num1 / num2}
 }
 
 let opStaging
 let opType
-let secondNum
+let secondNum = false
 
 let opStagingText = document.querySelector('#opStaging')
 let opTypeText = document.querySelector('#opTypeText')
@@ -22,6 +22,7 @@ document.querySelector('#clear').addEventListener('click', function()
   	opStagingText.textContent = opStaging;
   	opType = null;
   	opTypeText.textContent = opType;
+  	secondNum = false;
   });
 
 
@@ -45,10 +46,14 @@ item.addEventListener('click', function()
   	opStaging = parseInt(resultsNum.textContent);
   	opStagingText.textContent = opStaging;
   	opTypeText.textContent = opType;
+  	secondNum = false;
   });
  });
  
-
+document.querySelector('#equals').addEventListener('click', function() 
+  {
+  	resultsNum.textContent = operator(opType, opStaging, parseInt(resultsNum.textContent))
+  });
 
 
 
