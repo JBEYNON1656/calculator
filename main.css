@@ -61,7 +61,7 @@ div {
 
 #results {
     /* height: 40px; */
-    width: 179px;
+    width: 329px;
     margin: 4px;
     padding: 4px;
     border: 1px solid black;
@@ -70,6 +70,10 @@ div {
 #clear {
   height: 40px;
   width: 82px;
+}
+
+.operator, #clear, #equals {
+  background: #fecfce;
 }
 
 button {
